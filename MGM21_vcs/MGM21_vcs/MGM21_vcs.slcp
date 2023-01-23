@@ -1,0 +1,58 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: MGM21_vcs
+label: MGM21_vcs
+description: |
+  This example project shows an empty configuration that can be used as a starting point to add components and functionality.
+category: Example|Platform
+package: platform
+quality: production
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+sdk: {id: gecko_sdk, version: 3.1.1}
+toolchain_settings: []
+component:
+- {id: stdio}
+- {id: bluetooth_feature_nvm}
+- {id: btmesh_factory_reset}
+- {id: iostream_retarget_stdio}
+- {id: bluetooth_feature_gatt_server}
+- {id: btmesh_event_log}
+- instance: [example]
+  id: cli
+- {id: btmesh_feature_health_client}
+- {id: btmesh_ctl_server}
+- {id: bluetooth_feature_sm}
+- {id: btmesh_scene_server}
+- {id: bluetooth_feature_gap}
+- {id: MGM210PA22JIA}
+- {id: device_init}
+- {id: btmesh_feature_gatt_prov_bearer}
+- {id: bluetooth_feature_gatt}
+- {id: uartdrv_core}
+- {id: btmesh_scheduler_server}
+- {id: btmesh_feature_relay}
+- {id: btmesh_proxy}
+- {id: btmesh_time_server}
+- {id: app_log}
+- {id: sl_system}
+- {id: bluetooth_feature_connection}
+- {id: bluetooth_feature_advertiser}
+- instance: [debug]
+  id: iostream_usart
+- {id: btmesh_friend}
+- {id: btmesh_provisioning_decorator}
+- {id: btmesh_lc_server}
+- {id: emlib_usart}
+- {id: bluetooth_feature_system}
+- {id: bluetooth_feature_scanner}
+- {id: app_assert}
+- {id: btmesh_generic_base}
+define:
+- {name: DEBUG_EFM}
+ui_hints: {}
+
